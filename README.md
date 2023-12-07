@@ -17,7 +17,7 @@
 - Pandas : 저장한 웹툰 정보 리스트를 CSV파일로 변환
 
 **[getRecommendation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/f76feb53e613c86f96ef17565d5354888b0fd862/modeling/getRecommendation.ipynb)** 
-- Okt(Open Korean Text) / Kkma(꼬꼬마) : 한글 형태소 분석
+- Okt(Open Korean Text) / Kkma(꼬꼬마) : 한글 형태소 분석 (2개 중 1개 선택하기)
 - 줄거리를 분석할 때 중요하게 생각하는 것 : 명사, 동사, 부사, 형용사
 ```python
 from konlpy.tag import Kkma
