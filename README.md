@@ -10,10 +10,28 @@
 가져온 정보를 데이터셋으로 활용해 간단한 추천 프로그램을 만들어보자.
 
 ## 파일 구성
-**[getContentsInformation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/d330bc34a1e76ab360aff26bebd46abf0aeb5be3/crawling/getContentsInformation.ipynb)**  
-**[getRecommendation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/f76feb53e613c86f96ef17565d5354888b0fd862/modeling/getRecommendation.ipynb)**  
-**[Domain.py](https://github.com/woogie01/Fall-In-Toon/blob/f9b5f1629c60ac7f67f62421933cc539c8318fff/domain/Domain.py)**  
+**[getContentsInformation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/d330bc34a1e76ab360aff26bebd46abf0aeb5be3/crawling/getContentsInformation.ipynb)**
+- 네이버 웹툰 페이지에서 웹툰 정보 가져오기
+- 제목, 줄거리, 장르, 썸네일 이미지 주소, 링크 주소
+- Selenium : 로그인, 크롤링 자동화
+- Pandas : 저장한 웹툰 정보 리스트를 CSV파일로 변환
 
+**[getRecommendation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/f76feb53e613c86f96ef17565d5354888b0fd862/modeling/getRecommendation.ipynb)** 
+- Okt(Open Korean Text) : 한글 형태소 분석
+- 줄거리를 분석할 때 중요하게 생각하는 것 : 명사, 동사, 부사, 형용사
+- 토큰화 한 줄거리를 벡터화 후 내적을 이용해 코사인 유사도를 분석
+```python
+from sklearn.metrics.pairwise import linear_kernel
+
+# linear_kernel : cosine_similarity와 결과는 같지만 속도는 더 빠름
+# tfidf_matrix 벡터 내적을 통해 코사인 값을 비교
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+cosine_sim
+```
+
+**[Domain.py](https://github.com/woogie01/Fall-In-Toon/blob/f9b5f1629c60ac7f67f62421933cc539c8318fff/domain/Domain.py)**  
+- 빠른 웹페이지 구현을 위해 Streamlit을 사용.
+- 객체화 한 코사인 유사도 함수를 통해 상위 20개 웹툰을 추천.
 ## 사용법
 1. Crawling을 위해 네이버 계정의 ID, Password를 입력.
 ```python
