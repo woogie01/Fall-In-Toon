@@ -44,9 +44,10 @@ https://github.com/woogie01/Fall-In-Toon/assets/113490741/78acd4b8-001f-4d9c-a8a
 1. 크롤링으로 가져오는 속도가 매우 느려서 파일을 분리한 점.
 
 ## Reference
-Selenium with Python(https://selenium-python.readthedocs.io/)  
-파이썬 레시피 - 웹 활용입문(https://wikidocs.net/35949)  
-딥러닝을 이용한 자연어 처리 입문(https://wikidocs.net/24603)  
-Streamlit Documentation - Layouts and Containers  
+[Selenium with Python](https://selenium-python.readthedocs.io/)  
+[파이썬 레시피 - 웹 활용입문](https://wikidocs.net/35949)  
+[딥러닝을 이용한 자연어 처리 입문](https://wikidocs.net/24603)  
+[Streamlit Documentation](https://docs.streamlit.io/library/api-reference/layout)  
+[파이썬 활용편 - 머신러닝](https://nadocoding.tistory.com/92)
 
 
