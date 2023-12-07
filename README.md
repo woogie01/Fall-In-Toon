@@ -10,9 +10,9 @@
 가져온 정보를 데이터셋으로 활용해 간단한 추천 프로그램을 만들어보자.
 
 ## 파일 구성
-**[getContentsInformation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/219e34c295b41b0366b6c36c3aabf0b414a78c31/getContentsInformation.ipynb)**  
-**[getRecommendation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/dff3b0b1b737b39200706c37813784c9df7bd6e6/getRecommendation.ipynb)**  
-**[Domain.py](https://github.com/woogie01/Fall-In-Toon/blob/77b2a1adb838cd100af56ad534d79c3ab0526bb6/Launcher.py)**  
+**[getContentsInformation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/d330bc34a1e76ab360aff26bebd46abf0aeb5be3/crawling/getContentsInformation.ipynb)**  
+**[getRecommendation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/f76feb53e613c86f96ef17565d5354888b0fd862/modeling/getRecommendation.ipynb)**  
+**[Domain.py](https://github.com/woogie01/Fall-In-Toon/blob/f9b5f1629c60ac7f67f62421933cc539c8318fff/domain/Domain.py)**  
 
 ## 사용법
 1. Crawling을 위해 네이버 계정의 ID, Password를 입력.
