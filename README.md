@@ -28,6 +28,7 @@ streamlit run domain/Domain.py
 
 ## 실행 예시
 웹툰 킬러경찰(복수,킬러,액션)에 대한 추천 목록
+<img src="example/killer-0.png">
 
 https://github.com/woogie01/Fall-In-Toon/assets/113490741/78acd4b8-001f-4d9c-a8aa-9f4d307217a5
 
