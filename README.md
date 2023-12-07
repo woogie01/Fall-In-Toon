@@ -43,6 +43,7 @@ https://github.com/woogie01/Fall-In-Toon/assets/113490741/78acd4b8-001f-4d9c-a8a
 1. 웹툰 상세 페이지의 줄거리가 정확하지 못하거나 매우 간단한 경우가 존재.
 1. 웸툰 정보를 가져오는 플랫폼을 네이버, 카카오, 다음 등 다양하게 가져오기.
 1. 크롤링으로 가져오는 속도가 매우 느려서 파일을 분리한 점.
+1. 줄거리가 아닌 작화(그림체)를 기준으로 웹툰을 선택하는 사람도 있음.
 
 ## Reference
 [Selenium with Python](https://selenium-python.readthedocs.io/)  
