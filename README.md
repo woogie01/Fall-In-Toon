@@ -17,8 +17,38 @@
 - Pandas : 저장한 웹툰 정보 리스트를 CSV파일로 변환
 
 **[getRecommendation.ipynb](https://github.com/woogie01/Fall-In-Toon/blob/f76feb53e613c86f96ef17565d5354888b0fd862/modeling/getRecommendation.ipynb)** 
-- Okt(Open Korean Text) : 한글 형태소 분석
+- Okt(Open Korean Text) / Kkma(꼬꼬마) : 한글 형태소 분석
 - 줄거리를 분석할 때 중요하게 생각하는 것 : 명사, 동사, 부사, 형용사
+```python
+from konlpy.tag import Kkma
+from konlpy.tag import Okt
+
+def tokenizer_Kkma(text):
+    
+    # 내가 원하는 품사 (첫 알파벳)
+    my_tag = ("N", "V", "M", "XR")
+    # 형태소 분석기 정의
+    kkma = Kkma()
+    # 형태소 분석하기
+    words_with_tag = kkma.pos(text)
+    # 조건에 맞는 단어만 남겨놓기
+    words = [word for word, tag in words_with_tag if (len(word) > 1) and (tag.startswith(my_tag))]
+    
+    return words
+
+def tokenizer_Okt(text):
+    
+    # 내가 원하는 품사 - 명사, 동사, 부사, 형용사
+    my_tag = ("Noun", "Verb", "Adverb", "Adjective")
+    # 형태소 분석기 정의
+    okt = Okt()
+    # 형태소 분석하기
+    words_with_tag = okt.pos(text)
+    # 조건에 맞는 단어 남겨놓기
+    words = [word for word, tag in words_with_tag if (len(word) > 1) and (tag.startswith(my_tag))]
+
+    return words
+```
 - 토큰화 한 줄거리를 벡터화 후 내적을 이용해 코사인 유사도를 분석
 ```python
 from sklearn.metrics.pairwise import linear_kernel
